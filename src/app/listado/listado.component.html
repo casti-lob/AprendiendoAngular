@@ -1,0 +1,12 @@
+<ul>
+    <li *ngFor="let student of students;
+    let i = index;
+    let first = first;
+    let even = even;
+    let ood = odd;
+    "
+    [ngClass]="{par:even, impar:ood}"
+    >{{i}}. {{student}} Es el primero? {{first}} Es par? {{ood}} Es impar? {{even}} </li>
+    
+
+</ul>
