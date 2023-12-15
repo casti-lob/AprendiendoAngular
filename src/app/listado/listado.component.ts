@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-listado',
@@ -9,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class ListadoComponent {
   students: string[]=["Pepito","Susanita","Raquelita"]
+  @Input() mensaje: string='';
+  @Output() eventoClic = new EventEmitter<string[]>();
+
+  enviarEvento(){
+    this.eventoClic.emit(this.students);
+  }
 }

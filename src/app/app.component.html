@@ -1,4 +1,33 @@
-<app-saludo></app-saludo>
+<!-- <app-saludo></app-saludo>
 <router-outlet></router-outlet>
 <app-contador></app-contador>
-<app-listado></app-listado>
+<app-listado  (eventoClic)="eventClickManager($event)" [mensaje]="'!Hola desde el componente padre!'"></app-listado>
+<H1>Listado de personas del hijo</H1>
+<ul>
+    @for (person of people; track $index) {
+        <li>{{person}}</li>
+    }
+
+</ul>
+
+<input (keyup)="getValue(miInput.value)" #miInput type="text"> -->
+<!-- <button ()="getValue(miInput.value)">Obtener Valor</button> -->
+
+<!-- <p>Valor: {{value}}</p>
+
+<label for="name">Nombre:</label>
+//bidireccional el [] mira la propiedad del ts y envia al html y los () mira el html y lo cambia al ts
+<input [(ngModel)]="name" type="text">
+<p>Nombre:{{name}}</p>
+
+<button (click)="name='joaquin'" >Joaquinizar</button> -->
+
+<app-contador-dos [increment]="incrementNum"></app-contador-dos>
+
+<label for="initValue">Init value:</label>
+<input  type="number" #incrementNum name="initValue">
+
+<label for="increment">Increment:</label>
+<input type="number" name="increment">
+
+<h2>Current value: {{counter}}</h2>
